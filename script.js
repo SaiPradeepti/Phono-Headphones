@@ -22,21 +22,19 @@ $(function () {
 });
 
 // scrollreveal
-window.sr = ScrollReveal();
+window.addEventListener("load", function () {
+  window.sr = ScrollReveal();
 
-sr.reveal(".showcase-img", {
-  duration: 2000,
-  origin: "top",
-  distance: "300px",
-});
-// sr.reveal(".about .container p", {
-//   duration: 2000,
-//   origin: "bottom",
-//   distance: "300px",
-// });
-sr.reveal(".about .container h1", {
-  duration: 2000,
-  origin: "bottom",
-  distance: "100px",
-  viewFactor: 0.2,
+  sr.reveal(".showcase-img", {
+    duration: 2000,
+    origin: "top",
+    distance: "300px",
+  });
+
+  sr.reveal(".about .container h1", {
+    duration: 2000,
+    origin: "bottom",
+    distance: "100px",
+    viewFactor: 0.2,
+  });
 });
