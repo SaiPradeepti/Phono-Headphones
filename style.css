@@ -1,0 +1,283 @@
+@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.0/css/all.min.css");
+
+:root {
+  --primary-color: #333;
+  --secondary-color: #444;
+  --white: #fff;
+  --overlay-color: rgba(0, 0, 0, 0.7);
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Catamaran", sans-serif;
+  line-height: 1.6;
+  color: #333;
+  font-size: 1rem;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  line-height: 1.3;
+}
+
+/* header - nav */
+header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: var(--white);
+}
+
+header .container {
+  padding: 0 2.5em;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.navbar a {
+  text-decoration: none;
+  color: var(--primary-color);
+}
+
+.navbar-logo {
+  font-size: 2em;
+}
+
+.navbar-items {
+  display: flex;
+  width: 15%;
+  justify-content: space-around;
+}
+
+.navbar-link a {
+  font-size: 1.2em;
+  /* font-weight: bold; */
+}
+
+/* main */
+
+main {
+  margin-top: 62px;
+}
+
+/* main-showcase */
+.showcase {
+  height: 100vh;
+}
+.showcase .container {
+  height: 100%;
+  padding: 1em 4em;
+  display: flex;
+}
+
+.showcase-desc {
+  flex-basis: 50%;
+  padding: 1em 4em;
+  display: flex;
+  flex-direction: column;
+}
+
+.showcase-desc h1 {
+  font-size: 4em;
+}
+
+.showcase-desc > *:not(:first-child) {
+  padding-top: 1em;
+  font-size: 1.2em;
+}
+
+.btn {
+  cursor: pointer;
+  font-size: 1em;
+  color: var(--white);
+  background: var(--primary-color);
+  padding: 10px 20px;
+  border: none;
+  border-radius: 300px;
+  transition: background-color 0.5s ease;
+}
+
+.btn:hover {
+  background: var(--secondary-color);
+}
+
+.showcase-img {
+  flex-basis: 50%;
+  display: flex;
+  justify-content: center;
+}
+
+/* main-about */
+.about {
+  height: 100vh;
+}
+
+.about .container {
+  width: 100%;
+  height: 100%;
+  background-image: linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0.7),
+      rgba(0, 0, 0, 0.7)
+    ),
+    url("https://i.ibb.co/1RS1dqC/section-b.jpg");
+  background-size: cover;
+  background-position: center bottom;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: var(--white);
+  text-align: center;
+}
+
+.about .container p:first-child {
+  font-weight: bold;
+  font-size: 2em;
+}
+
+.about .container h1 {
+  font-size: 4.5em;
+  padding-top: 1em;
+}
+
+.about .container p:last-child {
+  font-weight: 100;
+  font-size: 1.5em;
+  padding: 1em 5em 0em 5em;
+}
+
+/* main-imgGallery */
+.imgGallery {
+  height: 80vh;
+}
+
+.imgGallery .container {
+  width: 100%;
+  height: 100%;
+  display: grid;
+  grid-template-columns: repeat(5, 270px);
+  grid-auto-rows: 270px;
+}
+
+.imgGallery .container .big {
+  position: relative;
+}
+
+.imgGallery .container img {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+
+.imgGallery .container .big:nth-of-type(1) {
+  grid-column: span 2;
+  grid-row: span 2;
+}
+
+.imgGallery .container .big:nth-of-type(2) {
+  grid-column: span 2;
+}
+
+/* footer */
+footer {
+  height: 50vh;
+}
+
+footer .container {
+  padding: 4rem;
+  height: 100%;
+  width: 100%;
+  background: var(--primary-color);
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 1em;
+  color: #ccc;
+  font-weight: bold;
+}
+
+footer h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: var(--white);
+}
+
+footer h3 {
+  margin-bottom: 0.7rem;
+  color: var(--white);
+}
+
+footer a {
+  line-height: 1.9;
+  color: #ccc;
+  text-decoration: none;
+}
+
+footer a > i {
+  color: #555;
+  margin-right: 0.5rem;
+}
+
+footer ul li {
+  list-style-type: none;
+}
+
+.email-form {
+  width: 100%;
+  display: inline-block;
+  background-color: #555;
+  position: relative;
+  border-radius: 20px;
+  line-height: 0;
+  margin-top: 1rem;
+}
+
+.email-form .form-control {
+  display: inline-block;
+  border: 0;
+  outline: 0;
+  font-size: 1rem;
+  color: #ddd;
+  background-color: transparent;
+  font-family: inherit;
+  margin: 0;
+  padding: 0 3rem 0 1.5rem;
+  width: 100%;
+  height: 45px;
+  border-radius: 20px;
+}
+
+.email-form .submit {
+  display: inline-block;
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 45px;
+  height: 45px;
+  background-color: #eee;
+  font-size: 1rem;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+  outline: 0;
+  border: 0;
+  color: #333;
+  cursor: pointer;
+  border-radius: 0 20px 20px 0;
+}
