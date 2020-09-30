@@ -70,7 +70,7 @@ header .container {
 /* main */
 
 main {
-  margin-top: 62px;
+  margin-top: 50px;
 }
 
 /* main-showcase */
@@ -118,6 +118,7 @@ main {
   flex-basis: 50%;
   display: flex;
   justify-content: center;
+  z-index: -1;
 }
 
 /* main-about */
