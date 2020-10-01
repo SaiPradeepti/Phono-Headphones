@@ -1,4 +1,5 @@
 @import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.0/css/all.min.css");
+@import url("https://fonts.googleapis.com/css2?family=Catamaran:wght@600&display=swap");
 
 :root {
   --primary-color: #333;
@@ -28,13 +29,13 @@ h3,
 h4 {
   line-height: 1.3;
 }
-
 /* header - nav */
 header {
   position: fixed;
   top: 0;
   width: 100%;
   background: var(--white);
+  z-index: 999;
 }
 
 header .container {
@@ -64,7 +65,6 @@ header .container {
 
 .navbar-link a {
   font-size: 1.2em;
-  /* font-weight: bold; */
 }
 
 /* main */
@@ -74,9 +74,6 @@ main {
 }
 
 /* main-showcase */
-.showcase {
-  height: 100vh;
-}
 .showcase .container {
   height: 100%;
   padding: 1em 4em;
@@ -118,12 +115,11 @@ main {
   flex-basis: 50%;
   display: flex;
   justify-content: center;
-  z-index: -1;
 }
 
 /* main-about */
 .about {
-  height: 100vh;
+  height: 90vh;
 }
 
 .about .container {
@@ -170,8 +166,8 @@ main {
   width: 100%;
   height: 100%;
   display: grid;
-  grid-template-columns: repeat(5, 270px);
-  grid-auto-rows: 270px;
+  grid-template-columns: repeat(5, 20%);
+  grid-auto-rows: 50%;
 }
 
 .imgGallery .container .big {
@@ -184,7 +180,6 @@ main {
   width: 100%;
   top: 0;
   left: 0;
-  z-index: -1;
 }
 
 .imgGallery .container .big:nth-of-type(1) {
@@ -197,9 +192,6 @@ main {
 }
 
 /* footer */
-footer {
-  height: 50vh;
-}
 
 footer .container {
   padding: 4rem;
@@ -281,4 +273,61 @@ footer ul li {
   color: #333;
   cursor: pointer;
   border-radius: 0 20px 20px 0;
+}
+
+@media (max-width: 992px) {
+  header .container {
+    padding: 0 1em;
+  }
+  .showcase-desc {
+    order: 1;
+    text-align: center;
+  }
+  .showcase-img {
+    order: 0;
+  }
+  .navbar-items {
+    width: 30%;
+  }
+  .showcase .container {
+    padding: 1em 1em;
+    display: flex;
+    flex-direction: column;
+  }
+  .about .container p:first-child {
+    padding-top: 1em;
+  }
+  .imgGallery {
+    height: 70vh;
+  }
+}
+@media (max-width: 768px) {
+  .showcase-desc {
+    padding: 1em 1em;
+  }
+  .about .container h1 {
+    font-size: 3em;
+    padding-top: 1em;
+  }
+  .about .container p:last-child {
+    font-size: 1em;
+    padding: 1em 2em 0em 2em;
+  }
+  .imgGallery {
+    height: 60vh;
+  }
+  footer .container {
+    padding: 2rem;
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+  footer .container div:nth-child(2),
+  footer .container div:nth-child(3) {
+    display: none;
+  }
+}
+@media (max-width: 576px) {
+  .imgGallery {
+    height: 45vh;
+  }
 }
