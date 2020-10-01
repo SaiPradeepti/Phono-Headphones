@@ -1,4 +1,4 @@
-// for smooth transition
+//smooth transition
 $(function () {
   $('a[href*="#"]:not([href="#"])').click(function () {
     if (
@@ -25,10 +25,11 @@ $(function () {
 window.addEventListener("load", function () {
   window.sr = ScrollReveal();
 
-  sr.reveal(".showcase-img", {
+  sr.reveal(".showcaseImg", {
     duration: 2000,
     origin: "top",
     distance: "300px",
+    delay: 100,
   });
 
   sr.reveal(".about .container h1", {
@@ -38,3 +39,6 @@ window.addEventListener("load", function () {
     viewFactor: 0.2,
   });
 });
+
+//simple-lightbox
+const lightbox = new SimpleLightbox(".imgGallery .container a");
